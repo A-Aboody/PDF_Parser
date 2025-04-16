@@ -1,3 +1,10 @@
+#PDF Parser Chatbot
+#Author: Abdula Ameen
+#Date: 04/16/2025
+#Description: This code is a Streamlit application that allows users to upload PDF documents, extract text from them, and interact with the extracted content using a conversational AI model. The app provides performance metrics for document processing and chat interactions.
+#Dependencies: streamlit, PyPDF2, langchain, HuggingFaceHub, altair, pandas, dotenv
+#Usage: Run the script using Streamlit. Ensure you have the required dependencies installed and a valid HuggingFace API token in a .env.example file.
+#ENGR 493 - Software Engineering Project
 import streamlit as st
 from PIL import Image
 import os
