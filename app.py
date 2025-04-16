@@ -1,4 +1,5 @@
 import streamlit as st
+from PIL import Image
 import os
 import time
 import pandas as pd
@@ -13,9 +14,11 @@ from langchain.chains import ConversationalRetrievalChain
 from langchain.llms import HuggingFaceHub
 from langchain.schema import HumanMessage, AIMessage
 
+logo = Image.open(r"./PDFParserLogo.png")
+
 st.set_page_config(
     page_title="ENGR 493",
-    page_icon="🧠",
+    page_icon="./PDFParserLogo.png",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -277,7 +280,7 @@ def main():
     if "processing_metrics" not in st.session_state:
         st.session_state.processing_metrics = None
 
-    st.markdown('<div class="main-header"><h1>🧠 PDF Knowledge Base Chat</h1></div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-header"><h1>PDF Knowledge Base Chat</h1></div>', unsafe_allow_html=True)
 
     with st.sidebar:
         st.header("Controls & Info")
